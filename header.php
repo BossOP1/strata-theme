@@ -10,6 +10,9 @@
   <meta name="description"
     content="Stradaworks - Expert automotive repair, maintenance, diagnostics, and performance installations for domestic and foreign vehicles.">
 
+
+  <?php wp_head(); ?>
+
   <script>
     tailwind.config = {
       theme: {
@@ -34,8 +37,6 @@
       }
     }
   </script>
-
-  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class('bg-black text-white antialiased selection:bg-red-500 selection:text-white'); ?>>
