@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php require_once __DIR__ . "/wp-fallback.php"; get_header(); ?>
 
   <!-- Hero Section -->
   <header class="relative w-full h-[85vh] min-h-[600px] overflow-hidden pt-20">

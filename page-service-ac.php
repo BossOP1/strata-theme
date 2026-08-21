@@ -2,7 +2,7 @@
 /*
 Template Name: Service - AC
 */
-get_header();
+require_once __DIR__ . "/wp-fallback.php"; get_header();
 ?>
 
     <!-- Hero Section -->

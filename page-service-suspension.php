@@ -1,4 +1,4 @@
-<?php /* Template Name: Service - Suspension */ get_header(); ?>
+<?php /* Template Name: Service - Suspension */ require_once __DIR__ . "/wp-fallback.php"; get_header(); ?>
 
     <!-- Hero Section -->
     <header class="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
