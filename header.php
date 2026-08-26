@@ -138,8 +138,67 @@
           Now</a>
       </div>
 
-      <button class="md:hidden text-2xl text-white">
-        <i class="fa-solid fa-bars"></i>
+      <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="md:hidden text-2xl text-white p-2 focus:outline-none z-50">
+        <i id="mobileMenuIcon" class="fa-solid fa-bars transition-transform duration-300"></i>
       </button>
     </div>
   </nav>
+
+  <!-- Mobile Menu Overlay Drawer -->
+  <div id="mobileMenu"
+    class="fixed inset-0 top-20 bg-black/95 backdrop-blur-xl border-t border-white/10 flex flex-col justify-between p-6 transition-all duration-300 ease-in-out opacity-0 pointer-events-none translate-x-full md:hidden z-40 overflow-y-auto max-h-[calc(100vh-5rem)]">
+    <div class="flex flex-col space-y-6 pt-4">
+      <a href="<?php echo home_url('/about'); ?>"
+        class="mobile-menu-link font-display uppercase tracking-widest text-lg font-bold hover:text-red-500 transition-colors border-b border-zinc-800 pb-3">About</a>
+      
+      <!-- Accordion for Services -->
+      <div class="border-b border-zinc-800 pb-3">
+        <button id="mobileServicesToggle"
+          class="w-full flex items-center justify-between font-display uppercase tracking-widest text-lg font-bold hover:text-red-500 transition-colors text-left">
+          <span>Services</span>
+          <i id="mobileServicesChevron" class="fa-solid fa-chevron-down text-sm transition-transform duration-300 text-zinc-400"></i>
+        </button>
+        
+        <div id="mobileServicesMenu" class="hidden flex-col space-y-3 pt-4 pl-4 border-l border-zinc-800 mt-2">
+          <a href="<?php echo home_url('/service-repair'); ?>"
+            class="mobile-menu-link text-zinc-400 hover:text-white transition-colors text-sm font-display uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-angle-right text-xs text-red-500"></i> Auto Repair
+          </a>
+          <a href="<?php echo home_url('/service-diagnostics'); ?>"
+            class="mobile-menu-link text-zinc-400 hover:text-white transition-colors text-sm font-display uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-angle-right text-xs text-red-500"></i> Diagnostics
+          </a>
+          <a href="<?php echo home_url('/service-wheels'); ?>"
+            class="mobile-menu-link text-zinc-400 hover:text-white transition-colors text-sm font-display uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-angle-right text-xs text-red-500"></i> Wheels & Tires
+          </a>
+          <a href="<?php echo home_url('/service-suspension'); ?>"
+            class="mobile-menu-link text-zinc-400 hover:text-white transition-colors text-sm font-display uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-angle-right text-xs text-red-500"></i> Suspension
+          </a>
+          <a href="<?php echo home_url('/service-ac'); ?>"
+            class="mobile-menu-link text-zinc-400 hover:text-white transition-colors text-sm font-display uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-angle-right text-xs text-red-500"></i> A/C Service
+          </a>
+          <a href="<?php echo home_url('/service-performance'); ?>"
+            class="mobile-menu-link text-zinc-400 hover:text-white transition-colors text-sm font-display uppercase tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-angle-right text-xs text-red-500"></i> Performance
+          </a>
+        </div>
+      </div>
+
+      <a href="<?php echo home_url('/#work'); ?>"
+        class="mobile-menu-link font-display uppercase tracking-widest text-lg font-bold hover:text-red-500 transition-colors border-b border-zinc-800 pb-3">Work</a>
+      <a href="<?php echo home_url('/#gallery'); ?>"
+        class="mobile-menu-link font-display uppercase tracking-widest text-lg font-bold hover:text-red-500 transition-colors border-b border-zinc-800 pb-3">Gallery</a>
+      <a href="https://instagram.com/stradaworks" target="_blank" rel="noopener"
+        class="mobile-menu-link font-display uppercase tracking-widest text-lg font-bold hover:text-red-500 transition-colors border-b border-zinc-800 pb-3">Instagram</a>
+    </div>
+
+    <div class="pt-6 pb-4">
+      <a href="<?php echo home_url('/contact'); ?>"
+        class="mobile-menu-link block w-full py-3 text-center bg-red-600 hover:bg-red-700 text-white font-display uppercase tracking-widest font-bold text-sm transition-all">
+        Book Now
+      </a>
+    </div>
+  </div>

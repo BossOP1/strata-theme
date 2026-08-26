@@ -40,6 +40,79 @@ if (servicesNav) {
   });
 }
 
+// Mobile Menu Controller
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mobileMenuIcon = document.getElementById("mobileMenuIcon");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileServicesToggle = document.getElementById("mobileServicesToggle");
+const mobileServicesMenu = document.getElementById("mobileServicesMenu");
+const mobileServicesChevron = document.getElementById("mobileServicesChevron");
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+if (mobileMenuBtn && mobileMenu) {
+  const toggleMobileMenu = (show) => {
+    const isOpening = show !== undefined ? show : mobileMenu.classList.contains("translate-x-full");
+    
+    if (isOpening) {
+      mobileMenu.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
+      mobileMenu.classList.add("opacity-100", "pointer-events-auto", "translate-x-0", "mobile-menu-active");
+      document.body.classList.add("overflow-hidden");
+      if (mobileMenuIcon) {
+        mobileMenuIcon.classList.remove("fa-bars");
+        mobileMenuIcon.classList.add("fa-xmark");
+      }
+    } else {
+      mobileMenu.classList.remove("opacity-100", "pointer-events-auto", "translate-x-0", "mobile-menu-active");
+      mobileMenu.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
+      document.body.classList.remove("overflow-hidden");
+      if (mobileMenuIcon) {
+        mobileMenuIcon.classList.remove("fa-xmark");
+        mobileMenuIcon.classList.add("fa-bars");
+      }
+    }
+  };
+
+  mobileMenuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleMobileMenu();
+  });
+
+  // Services Accordion Toggle
+  if (mobileServicesToggle && mobileServicesMenu) {
+    mobileServicesToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isHidden = mobileServicesMenu.classList.contains("hidden");
+      if (isHidden) {
+        mobileServicesMenu.classList.remove("hidden");
+        mobileServicesMenu.classList.add("flex");
+        if (mobileServicesChevron) {
+          mobileServicesChevron.classList.add("rotate-180");
+        }
+      } else {
+        mobileServicesMenu.classList.add("hidden");
+        mobileServicesMenu.classList.remove("flex");
+        if (mobileServicesChevron) {
+          mobileServicesChevron.classList.remove("rotate-180");
+        }
+      }
+    });
+  }
+
+  // Close menu when clicking links inside mobile menu
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      toggleMobileMenu(false);
+    });
+  });
+
+  // Close menu on Escape keypress
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileMenu.classList.contains("mobile-menu-active")) {
+      toggleMobileMenu(false);
+    }
+  });
+}
+
 // Custom Cursor (Simple Follower)
 const cursor = document.getElementById("cursor");
 

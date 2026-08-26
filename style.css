@@ -388,3 +388,11 @@ html {
     transform: none !important; /* Reset any potential transform issues */
 }
 
+/* Mobile Menu Drawer Active State */
+#mobileMenu.mobile-menu-active {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateX(0) !important;
+}
+
+
