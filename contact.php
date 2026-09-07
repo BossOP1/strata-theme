@@ -1,8 +1,7 @@
 <?php
-/*
-Template Name: Contact
-*/
-require_once __DIR__ . "/wp-fallback.php"; get_header();
+$page_title       = 'Contact | Stradaworks Automotive';
+$page_description = 'Get in touch with Stradaworks. Request a quote, book a service, or visit our shop in North Port, Florida.';
+require __DIR__ . '/includes/header.php';
 ?>
 
     <!-- Header Section -->
@@ -197,7 +196,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <!-- IG Item 1 -->
                 <a href="#" class="group relative aspect-square overflow-hidden bg-zinc-900 border border-zinc-800">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/contact-garage-1.jpg"
+                    <img src="<?= asset('images/contact-garage-1.jpg') ?>"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
                         alt="IG Post">
                     <div
@@ -207,7 +206,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
                 </a>
                 <!-- IG Item 2 -->
                 <a href="#" class="group relative aspect-square overflow-hidden bg-zinc-900 border border-zinc-800">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/tony_working_garage.png"
+                    <img src="<?= asset('images/tony_working_garage.png') ?>"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
                         alt="IG Post">
                     <div
@@ -217,7 +216,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
                 </a>
                 <!-- IG Item 3 -->
                 <a href="#" class="group relative aspect-square overflow-hidden bg-zinc-900 border border-zinc-800">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/about_hero_lancer.png"
+                    <img src="<?= asset('images/about_hero_lancer.png') ?>"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
                         alt="IG Post">
                     <div
@@ -227,7 +226,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
                 </a>
                 <!-- IG Item 4 -->
                 <a href="#" class="group relative aspect-square overflow-hidden bg-zinc-900 border border-zinc-800">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/contact-garage-2.jpg"
+                    <img src="<?= asset('images/contact-garage-2.jpg') ?>"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
                         alt="IG Post">
                     <div
@@ -249,6 +248,4 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
 
 
 
-    <?php wp_footer(); ?>
-</body>
-</html>
+    <?php require __DIR__ . '/includes/scripts.php'; ?>

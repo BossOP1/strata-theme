@@ -1,9 +1,13 @@
-<?php /* Template Name: Service - Suspension */ require_once __DIR__ . "/wp-fallback.php"; get_header(); ?>
+<?php
+$page_title       = 'Suspension Work | Stradaworks Automotive';
+$page_description = 'Coilovers, air ride, bushings and corner balancing. Suspension built around how you actually drive.';
+require __DIR__ . '/includes/header.php';
+?>
 
     <!-- Hero Section -->
     <header class="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
         <div class="absolute inset-0">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/shop-civic-lift.jpg"
+            <img src="<?= asset('images/shop-civic-lift.jpg') ?>"
                 class="w-full h-full object-cover" alt="Suspension Work">
             <div class="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent"></div>
         </div>
@@ -85,7 +89,7 @@
             </div>
             <div class="relative">
                 <div class="absolute -inset-4 bg-red-600/10 rotate-3 border border-red-600/20"></div>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/gallery_bmw_suspension.png"
+                <img src="<?= asset('images/gallery_bmw_suspension.png') ?>"
                     class="relative z-10 w-full h-full object-cover border border-zinc-800" alt="Detailed Suspension">
             </div>
         </div>
@@ -180,7 +184,7 @@
                             class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">Builds</span>
                     </h2>
                 </div>
-                <a href="<?php echo home_url('/#work'); ?>"
+                <a href="<?= url('/#work') ?>"
                     class="hidden md:inline-flex items-center gap-2 text-zinc-400 font-display uppercase tracking-widest text-xs hover:text-white transition-colors group">
                     <span>View All</span>
                     <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
@@ -190,7 +194,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Work 1 -->
                 <div class="group relative overflow-hidden border border-zinc-800 bg-zinc-900 aspect-[4/3]">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/gallery_coilover_install.png"
+                    <img src="<?= asset('images/gallery_coilover_install.png') ?>"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         alt="Coilover Install">
                     <div
@@ -205,7 +209,7 @@
 
                 <!-- Work 2 -->
                 <div class="group relative overflow-hidden border border-zinc-800 bg-zinc-900 aspect-[4/3]">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/suspension_specialist.png"
+                    <img src="<?= asset('images/suspension_specialist.png') ?>"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         alt="Suspension Work">
                     <div
@@ -219,7 +223,7 @@
 
                 <!-- Work 3 -->
                 <div class="group relative overflow-hidden border border-zinc-800 bg-zinc-900 aspect-[4/3]">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/gallery_bmw_suspension.png"
+                    <img src="<?= asset('images/gallery_bmw_suspension.png') ?>"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         alt="Stance Setup">
                     <div
@@ -246,7 +250,7 @@
                     Understanding suspension geometry can be complex. Here are some answers to frequent questions about
                     our tuning and installation process.
                 </p>
-                <a href="<?php echo home_url('/contact'); ?>"
+                <a href="<?= url('/contact') ?>"
                     class="inline-flex items-center gap-2 text-white font-display uppercase tracking-widest text-sm hover:text-red-500 transition-colors group">
                     <span>Ask something else</span>
                     <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
@@ -332,7 +336,7 @@
 
     <!-- CTA -->
     <section
-        class="py-20 bg-[url('<?php echo get_template_directory_uri(); ?>/images/carbon-fibre.png')] bg-zinc-950 relative border-t border-zinc-900">
+        class="py-20 bg-[url('<?= asset('images/carbon-fibre.png') ?>')] bg-zinc-950 relative border-t border-zinc-900">
         <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/90"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
             <h2 class="text-4xl md:text-6xl font-display font-bold text-white uppercase mb-8">Ready to <span
@@ -342,11 +346,11 @@
                 goals.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="<?php echo home_url('/contact'); ?>"
+                <a href="<?= url('/contact') ?>"
                     class="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-display uppercase tracking-widest font-bold transition-all hover:skew-x-[-10deg]">
                     Book Consultation
                 </a>
-                <a href="<?php echo home_url('/#work'); ?>"
+                <a href="<?= url('/#work') ?>"
                     class="px-8 py-4 border border-zinc-700 hover:bg-white hover:text-black text-white font-display uppercase tracking-widest font-bold transition-all">
                     View Gallery
                 </a>
@@ -354,4 +358,4 @@
         </div>
     </section>
 
-<?php get_footer(); ?>
+<?php require __DIR__ . '/includes/footer.php'; ?>

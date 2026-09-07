@@ -1,4 +1,8 @@
-<?php require_once __DIR__ . "/wp-fallback.php"; get_header(); ?>
+<?php
+$page_title       = 'Stradaworks Automotive | Expert Auto Repair, Diagnostics & Performance';
+$page_description = 'Stradaworks - Expert automotive repair, maintenance, diagnostics, and performance installations for domestic and foreign vehicles.';
+require __DIR__ . '/includes/header.php';
+?>
 
   <!-- Hero Section -->
   <header class="relative w-full h-[85vh] min-h-[600px] overflow-hidden pt-20">
@@ -6,7 +10,7 @@
       <!-- Background -->
       <div class="absolute inset-0">
         <div class="absolute inset-0 bg-black/40 z-10"></div>
-        <img src="<?php echo get_template_directory_uri(); ?>/images/hero-lancer-evo.jpg"
+        <img src="<?= asset('images/hero-lancer-evo.jpg') ?>"
           class="w-full h-full object-cover" alt="Hero Background">
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent z-10"></div>
       </div>
@@ -68,39 +72,39 @@
     <div class="relative flex overflow-x-hidden group">
       <div class="animate-marquee whitespace-nowrap flex gap-24 items-center pr-24">
         <!-- Set 1 -->
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/porsche.svg"
+        <img src="<?= asset('images/brands/porsche.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Porsche">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/bmw.svg"
+        <img src="<?= asset('images/brands/bmw.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="BMW">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/amg.svg"
+        <img src="<?= asset('images/brands/amg.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="AMG">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/audi.svg"
+        <img src="<?= asset('images/brands/audi.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Audi">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/ferrari.svg"
+        <img src="<?= asset('images/brands/ferrari.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Ferrari">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/lamborghini.svg"
+        <img src="<?= asset('images/brands/lamborghini.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Lamborghini">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/nissan.svg"
+        <img src="<?= asset('images/brands/nissan.svg') ?>"
           class="h-8 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Nissan">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/toyota.svg"
+        <img src="<?= asset('images/brands/toyota.svg') ?>"
           class="h-8 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Toyota">
 
         <!-- Set 2 (Duplicate for smooth loop) -->
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/porsche.svg"
+        <img src="<?= asset('images/brands/porsche.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Porsche">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/bmw.svg"
+        <img src="<?= asset('images/brands/bmw.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="BMW">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/amg.svg"
+        <img src="<?= asset('images/brands/amg.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="AMG">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/audi.svg"
+        <img src="<?= asset('images/brands/audi.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Audi">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/ferrari.svg"
+        <img src="<?= asset('images/brands/ferrari.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Ferrari">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/lamborghini.svg"
+        <img src="<?= asset('images/brands/lamborghini.svg') ?>"
           class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Lamborghini">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/nissan.svg"
+        <img src="<?= asset('images/brands/nissan.svg') ?>"
           class="h-8 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Nissan">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/brands/toyota.svg"
+        <img src="<?= asset('images/brands/toyota.svg') ?>"
           class="h-8 w-auto opacity-50 hover:opacity-100 transition-opacity duration-300" alt="Toyota">
       </div>
 
@@ -123,7 +127,7 @@
           class="absolute -inset-4 bg-red-600/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
         </div>
         <div class="relative h-[500px] overflow-hidden border border-zinc-800">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/shop-civic-lift.jpg"
+          <img src="<?= asset('images/shop-civic-lift.jpg') ?>"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             alt="Restoration Art">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
@@ -272,7 +276,7 @@
       <div
         class="snap-center shrink-0 w-[400px] md:w-[600px] h-[450px] relative group overflow-hidden bg-zinc-900 border border-zinc-800">
         <div class="h-[320px] overflow-hidden relative">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/shop-m4-front.jpg"
+          <img src="<?= asset('images/shop-m4-front.jpg') ?>"
             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             alt="BMW M4 Engine Repair">
           <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
@@ -292,7 +296,7 @@
       <div
         class="snap-center shrink-0 w-[400px] md:w-[600px] h-[450px] relative group overflow-hidden bg-zinc-900 border border-zinc-800">
         <div class="h-[320px] overflow-hidden relative">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/work-gtr-r34.jpg"
+          <img src="<?= asset('images/work-gtr-r34.jpg') ?>"
             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             alt="Work 2">
           <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
@@ -312,7 +316,7 @@
       <div
         class="snap-center shrink-0 w-[400px] md:w-[600px] h-[450px] relative group overflow-hidden bg-zinc-900 border border-zinc-800">
         <div class="h-[320px] overflow-hidden relative">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/work-supra-mk4.jpg"
+          <img src="<?= asset('images/work-supra-mk4.jpg') ?>"
             class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
             alt="Work 3">
           <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
@@ -433,7 +437,7 @@
 
   <!-- Premium Services Showcase Section (Lighter/Textured Background) -->
   <section
-    class="py-20 bg-[#0c0c0c] relative border-b border-zinc-900 bg-[url('<?php echo get_template_directory_uri(); ?>/images/carbon-fibre.png')]">
+    class="py-20 bg-[#0c0c0c] relative border-b border-zinc-900 bg-[url('<?= asset('images/carbon-fibre.png') ?>')]">
     <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/80">
     </div>
 
@@ -460,7 +464,7 @@
         <div
           class="group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-red-600 transition-all duration-500">
           <div class="relative h-64 overflow-hidden">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/shop-engine-out.jpg"
+            <img src="<?= asset('images/shop-engine-out.jpg') ?>"
               class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
               alt="Automotive Repair">
             <!-- <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div> -->
@@ -505,7 +509,7 @@
         <div
           class="group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-red-600 transition-all duration-500">
           <div class="relative h-64 overflow-hidden">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/car_diagnostics.png"
+            <img src="<?= asset('images/car_diagnostics.png') ?>"
               class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
               alt="Diagnostics">
             <!-- <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div> -->
@@ -550,7 +554,7 @@
         <div
           class="group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-red-600 transition-all duration-500">
           <div class="relative h-64 overflow-hidden">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/wheels_tires.png"
+            <img src="<?= asset('images/wheels_tires.png') ?>"
               class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
               alt="Wheels &amp; Tires">
             <!-- <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div> -->
@@ -595,7 +599,7 @@
         <div
           class="group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-red-600 transition-all duration-500">
           <div class="relative h-64 overflow-hidden">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/shop-alignment-silverado.jpg"
+            <img src="<?= asset('images/shop-alignment-silverado.jpg') ?>"
               class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
               alt="Suspension &amp; Alignment">
             <!-- <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div> -->
@@ -640,7 +644,7 @@
         <div
           class="group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-red-600 transition-all duration-500">
           <div class="relative h-64 overflow-hidden">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/air_conditioning.png"
+            <img src="<?= asset('images/air_conditioning.png') ?>"
               class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
               alt="A/C Service">
             <!-- <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div> -->
@@ -685,7 +689,7 @@
         <div
           class="group relative overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-red-600 transition-all duration-500">
           <div class="relative h-64 overflow-hidden">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/shop-ecu-tuning.jpg"
+            <img src="<?= asset('images/shop-ecu-tuning.jpg') ?>"
               class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
               alt="Performance Installs &amp; ECU Tuning">
             <!-- <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div> -->
@@ -791,24 +795,24 @@
         <div class="grid grid-cols-2 gap-4">
           <div class="space-y-4">
             <div class="relative h-64 overflow-hidden group border border-zinc-800">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/shop-evo-widebody.jpg"
+              <img src="<?= asset('images/shop-evo-widebody.jpg') ?>"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 object-center"
                 alt="Detail 1">
             </div>  
             <div class="relative h-80 overflow-hidden group border border-zinc-800">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/shop-wrx.jpg"
+              <img src="<?= asset('images/shop-wrx.jpg') ?>"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 object-center"
                 alt="Detail 2">
             </div>
           </div>
           <div class="space-y-4 mt-12">
             <div class="relative h-80 overflow-hidden group border border-zinc-800">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/shop-corvette.jpg"
+              <img src="<?= asset('images/shop-corvette.jpg') ?>"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 object-center"
                 alt="Detail 3">
             </div>
             <div class="relative h-64 overflow-hidden group border border-zinc-800">
-              <img src="<?php echo get_template_directory_uri(); ?>/images/shop-z3m.jpg"
+              <img src="<?= asset('images/shop-z3m.jpg') ?>"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 object-center"
                 alt="Detail 4">
             </div>
@@ -850,7 +854,7 @@
           class="instagram-embed relative bg-zinc-900 border border-zinc-800 hover:border-zinc-700 overflow-hidden transition-all duration-300"
           data-instagram-url="https://www.instagram.com/p/C0JlZuQPxXX/embed">
           <div class="instagram-thumbnail-container relative aspect-[1/1] overflow-hidden bg-zinc-950 cursor-pointer">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/shop-interior-lifts.jpg"
+            <img src="<?= asset('images/shop-interior-lifts.jpg') ?>"
               class="w-full h-full object-cover object-center" alt="Latest Build">
             <!-- <div class="absolute inset-0 bg-black/20 transition-colors"></div> -->
           </div>
@@ -861,7 +865,7 @@
           class="instagram-embed relative bg-zinc-900 border border-zinc-800 hover:border-zinc-700 overflow-hidden transition-all duration-300"
           data-instagram-url="https://www.instagram.com/p/C0JlZuQPxXX/embed">
           <div class="instagram-thumbnail-container relative aspect-[1/1] overflow-hidden bg-zinc-950 cursor-pointer">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/shop-r32-gtr.jpg"
+            <img src="<?= asset('images/shop-r32-gtr.jpg') ?>"
               class="w-full h-full object-cover object-center" alt="Detailing Magic">
             <!-- <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div> -->
           </div>
@@ -872,7 +876,7 @@
           class="instagram-embed relative bg-zinc-900 border border-zinc-800 hover:border-zinc-700 overflow-hidden transition-all duration-300"
           data-instagram-url="https://www.instagram.com/p/C0JlZuQPxXX/embed">
           <div class="instagram-thumbnail-container relative aspect-[1/1] overflow-hidden bg-zinc-950 cursor-pointer">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/shop-m4-front.jpg"
+            <img src="<?= asset('images/shop-m4-front.jpg') ?>"
               class="w-full h-full object-cover object-center" alt="Behind The Scenes">
             <!-- <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div> -->
           </div>
@@ -883,7 +887,7 @@
           class="instagram-embed  relative bg-zinc-900 border border-zinc-800 hover:border-zinc-700 overflow-hidden transition-all duration-300"
           data-instagram-url="https://www.instagram.com/p/C0JlZuQPxXX/embed">
           <div class="instagram-thumbnail-container relative aspect-[1/1] overflow-hidden bg-zinc-950 cursor-pointer">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/shop-nos-trunk.jpg"
+            <img src="<?= asset('images/shop-nos-trunk.jpg') ?>"
               class="w-full h-full object-cover object-center" alt="Performance Tune">
             <!-- <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div> -->
           </div>
@@ -973,4 +977,4 @@
     </div>
   </section> -->
 
-<?php get_footer(); ?>
+<?php require __DIR__ . '/includes/footer.php'; ?>

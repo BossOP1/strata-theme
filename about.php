@@ -1,14 +1,13 @@
 <?php
-/*
-Template Name: About Us
-*/
-require_once __DIR__ . "/wp-fallback.php"; get_header();
+$page_title       = 'About Us | Stradaworks Automotive';
+$page_description = 'Meet the team behind Stradaworks. Decades of hands-on experience in automotive repair, diagnostics and performance builds.';
+require __DIR__ . '/includes/header.php';
 ?>
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/about-hero-strata.webp" class="w-full h-full object-cover opacity-60 scale-110" id="hero-bg"
+            <img src="<?= asset('images/about-hero-strata.webp') ?>" class="w-full h-full object-cover opacity-60 scale-110" id="hero-bg"
                 alt="Red Lancer Hero">
             <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black"></div>
         </div>
@@ -68,7 +67,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
                 <div
                     class="w-full h-full overflow-hidden relative  group-hover:grayscale-0 transition-all duration-1000">
                     <!-- Placeholder for tony_stock_lancer.png if generation failed, but we have it -->
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/old-lancer-2-new.png"
+                    <img src="<?= asset('images/old-lancer-2-new.png') ?>"
                         class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
                         alt="Tony with Stock Lancer">
                     <!-- <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div> -->
@@ -92,7 +91,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
                     class="absolute -inset-4 border border-zinc-800 -rotate-3 transition-transform duration-700 group-hover:rotate-0">
                 </div>
                 <div class="w-full h-full overflow-hidden relative">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/tony-strata-working.jpg"
+                    <img src="<?= asset('images/tony-strata-working.jpg') ?>"
                         class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
                         alt="Working in the garage">
                     <!-- <div class="absolute inset-0 bg-black/60"></div> -->
@@ -135,7 +134,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
         <div class="journey-section min-h-screen flex items-center justify-center relative overflow-hidden">
             <div class="absolute inset-0 z-0">
                 <!-- Using hero image again as placeholder for action shot, with different styling -->
-                <img src="<?php echo get_template_directory_uri(); ?>/images/lancer-rear.jpg" class="w-full h-full object-cover opacity-40 parallax-bg"
+                <img src="<?= asset('images/lancer-rear.jpg') ?>" class="w-full h-full object-cover opacity-40 parallax-bg"
                     alt="Lancer on Track">
                 <div class="absolute inset-0 bg-black/60"></div>
             </div>
@@ -188,7 +187,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
                         what's next.
                     </p>
                     <div class="pt-8">
-                        <a href="<?php echo home_url('/#contact'); ?>"
+                        <a href="<?= url('/#contact') ?>"
                             class="inline-flex items-center gap-4 text-white font-display uppercase tracking-widest hover:text-red-500 transition-colors group">
                             <span class="border-b border-transparent group-hover:border-red-500 pb-1">Start Your
                                 Build</span>
@@ -201,7 +200,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
             <div class="w-full md:w-5/12 h-[50vh] md:h-[60vh] relative">
                 <!-- Using about_hero_lancer.png as placeholder for tony_final_portrait -->
                 <div class="absolute inset-0 bg-zinc-900 border border-zinc-800 transform rotate-2"></div>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/tony-today.JPG"
+                <img src="<?= asset('images/tony-today.JPG') ?>"
                     class="w-full h-full object-cover relative z-10 border border-zinc-800 transition-all duration-700"
                     alt="Tony Today">
             </div>
@@ -216,7 +215,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
                 </div>
                 <!-- Main Image -->
                 <div class="w-full h-[70%] overflow-hidden relative mb-4">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/tony-strata-0.PNG"
+                    <img src="<?= asset('images/tony-strata-0.PNG') ?>"
                         class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
                         alt="Tony working in the garage">
                     <div class="absolute inset-0 bg-black/40"></div>
@@ -224,7 +223,7 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
                 <!-- Secondary Image (Floating) -->
                 <div
                     class="absolute -bottom-10 -right-10 w-2/3 h-1/2 overflow-hidden border-4 border-black shadow-2xl z-20 hidden md:block group">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/tony-strata-with-tony.webp"
+                    <img src="<?= asset('images/tony-strata-with-tony.webp') ?>"
                         class="w-full h-full object-cover scale-125 group-hover:scale-110 transition-transform duration-700"
                         alt="Tony with Lancer">
                     <div class="absolute inset-0 bg-red-900/20 mix-blend-overlay"></div>
@@ -292,4 +291,4 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
 
     </main>
 
-<?php get_footer(); ?>
+<?php require __DIR__ . '/includes/footer.php'; ?>

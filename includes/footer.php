@@ -68,7 +68,7 @@
         <!-- Brand Info -->
         <div>
           <a href="#" class="block mb-6">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/stradaworks-logo.png"
+            <img src="<?= asset('images/stradaworks-logo.png') ?>"
               alt="Stradaworks" class="h-12 brightness-0 invert">
           </a>
           <p class="text-zinc-500 max-w-md mb-8 leading-relaxed">
@@ -146,7 +146,4 @@
       Now</span>
   </a>
 
-  <?php wp_footer(); ?>
-</body>
-
-</html>
+  <?php require __DIR__ . '/scripts.php'; ?>
