@@ -42,62 +42,66 @@ require_once __DIR__ . "/wp-fallback.php"; get_header();
                 Project Inquiry
             </h2>
 
-            <form class="space-y-6 relative z-10">
+            <form class="space-y-6 relative z-10" accept-charset="UTF-8"
+                action="https://app.formester.com/forms/LAxTm066S/submissions" method="POST">
+
+                <input type="hidden" name="source" value="Contact Page - Project Inquiry">
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-2">
-                        <label class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Full Name</label>
-                        <input type="text"
+                        <label for="ci-name" class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Full Name</label>
+                        <input id="ci-name" name="name" type="text" required autocomplete="name"
                             class="w-full bg-zinc-950 border border-zinc-800 text-white px-4 py-3 focus:border-red-600 outline-none transition-colors"
                             placeholder="John Doe">
                     </div>
                     <div class="space-y-2">
-                        <label class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Phone Number</label>
-                        <input type="tel"
+                        <label for="ci-phone" class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Phone Number</label>
+                        <input id="ci-phone" name="phone" type="tel" required autocomplete="tel"
                             class="w-full bg-zinc-950 border border-zinc-800 text-white px-4 py-3 focus:border-red-600 outline-none transition-colors"
                             placeholder="+1 (555) 000-0000">
                     </div>
                 </div>
 
                 <div class="space-y-2">
-                    <label class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Email Address</label>
-                    <input type="email"
+                    <label for="ci-email" class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Email Address</label>
+                    <input id="ci-email" name="email" type="email" required autocomplete="email"
                         class="w-full bg-zinc-950 border border-zinc-800 text-white px-4 py-3 focus:border-red-600 outline-none transition-colors"
                         placeholder="john@example.com">
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-2">
-                        <label class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Vehicle Make &
+                        <label for="ci-vehicle" class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Vehicle Make &amp;
                             Model</label>
-                        <input type="text"
+                        <input id="ci-vehicle" name="vehicle" type="text"
                             class="w-full bg-zinc-950 border border-zinc-800 text-white px-4 py-3 focus:border-red-600 outline-none transition-colors"
                             placeholder="e.g. Porsche 911 GT3">
                     </div>
                     <div class="space-y-2">
-                        <label class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Service Interested
+                        <label for="ci-service" class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Service Interested
                             In</label>
-                        <select
+                        <select id="ci-service" name="service" required
                             class="w-full bg-zinc-950 border border-zinc-800 text-zinc-400 px-4 py-3 focus:border-red-600 outline-none transition-colors appearance-none">
-                            <option>Select Service</option>
-                            <option>Automotive Repair</option>
-                            <option>Diagnostics</option>
-                            <option>Wheels & Tires</option>
-                            <option>Suspension Work</option>
-                            <option>A/C Service</option>
-                            <option>Aftermarket & Performance</option>
+                            <option value="" disabled selected>Select Service</option>
+                            <option value="Automotive Repair">Automotive Repair</option>
+                            <option value="Diagnostics">Diagnostics</option>
+                            <option value="Wheels &amp; Tires">Wheels &amp; Tires</option>
+                            <option value="Suspension Work">Suspension Work</option>
+                            <option value="A/C Service">A/C Service</option>
+                            <option value="Aftermarket &amp; Performance">Aftermarket &amp; Performance</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="space-y-2">
-                    <label class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Project Details /
+                    <label for="ci-message" class="text-xs text-zinc-500 uppercase tracking-wider font-bold">Project Details /
                         Message</label>
-                    <textarea
+                    <textarea id="ci-message" name="message" required
                         class="w-full bg-zinc-950 border border-zinc-800 text-white px-4 py-3 focus:border-red-600 outline-none transition-colors h-32 resize-none"
                         placeholder="Tell us more about what you're looking to achieve..."></textarea>
                 </div>
 
-                <button type="button"
+                <button type="submit"
                     class="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-display uppercase tracking-widest font-bold transition-all hover:skew-x-[-2deg] flex items-center justify-center gap-2 group/btn">
                     <span>Send Request</span>
                     <i class="fa-solid fa-paper-plane group-hover/btn:translate-x-1 transition-transform"></i>
